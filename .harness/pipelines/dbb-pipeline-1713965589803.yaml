@@ -13,7 +13,7 @@ pipeline:
           cloneCodebase: true
           platform:
             os: Linux
-            arch: Amd64
+            arch: Arm64
           runtime:
             type: Docker
             spec: {}
@@ -25,7 +25,7 @@ pipeline:
                   identifier: Run_1
                   spec:
                     connectorRef: account.harnessImage
-                    image: <+input>
+                    image: harness/delegate
                     shell: Sh
                     command: ls
   properties:
