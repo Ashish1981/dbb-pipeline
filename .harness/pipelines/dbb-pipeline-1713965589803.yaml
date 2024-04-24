@@ -24,8 +24,8 @@ pipeline:
                   name: Run_1
                   identifier: Run_1
                   spec:
-                    shell: Sh
-                    command: ssh ashissa@192.86.33.143 -p 2223
+                    shell: Bash
+                    command: ls -a
   properties:
     ci:
       codebase:
