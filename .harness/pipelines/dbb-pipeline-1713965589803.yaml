@@ -13,7 +13,7 @@ pipeline:
           cloneCodebase: true
           platform:
             os: Linux
-            arch: Amd64
+            arch: Arm64
           runtime:
             type: Docker
             spec: {}
@@ -33,4 +33,4 @@ pipeline:
         repoName: Ashish1981/dbb-pipeline
         build: <+input>
   delegateSelectors:
-    - docker-delegate-dallas
+    - linux-aarch64
