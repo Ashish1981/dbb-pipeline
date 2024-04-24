@@ -3,33 +3,34 @@ pipeline:
   name: Build dbb-pipeline
   orgIdentifier: default
   projectIdentifier: default_project
-  properties:
-    ci:
-      codebase:
-        build: <+input>
-        connectorRef: account.Github
-        repoName: Ashish1981/dbb-pipeline
   stages:
     - stage:
-        identifier: build
-        name: build
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
         spec:
-          caching:
-            enabled: true
           cloneCodebase: true
-          execution:
-            steps:
-              - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
-                  type: Run
           platform:
             os: Linux
-            arch: Arm64
+            arch: Amd64
           runtime:
             type: Docker
             spec: {}
-        type: CI
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: <+input>
+                    shell: Sh
+                    command: ls
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: Ashish1981/dbb-pipeline
+        build: <+input>
