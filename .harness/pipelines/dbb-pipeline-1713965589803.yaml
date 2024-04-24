@@ -32,3 +32,5 @@ pipeline:
         connectorRef: account.Github
         repoName: Ashish1981/dbb-pipeline
         build: <+input>
+  delegateSelectors:
+    - docker-delegate-dallas
