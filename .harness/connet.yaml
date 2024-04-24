@@ -1,0 +1,5 @@
+service:
+  name: connet
+  identifier: connet
+  orgIdentifier: default
+  projectIdentifier: default_project
