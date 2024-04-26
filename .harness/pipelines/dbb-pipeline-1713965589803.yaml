@@ -33,4 +33,4 @@ pipeline:
         repoName: Ashish1981/dbb-pipeline
         build: <+input>
   delegateSelectors:
-    - linux-aarch64
+    - docker-delegate-dallas
